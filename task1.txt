@@ -1,0 +1,25 @@
+Задание №1.
+Необходимо создать таблицу пользователей в БД. Основные поля таблицы:
+- ФИО пользователя
+- login
+- password (закодирован md5)
+- дата рождения
+- активность на сайте
+PS: В качестве решения нужно перечислить все запросы к БД.
+
+
+
+Решение:
+
+CREATE DATABASE IF NOT EXISTS mydb2;
+
+USE mydb2;
+
+CREATE TABLE IF NOT EXISTS users (
+id int AUTO_INCREMENT PRIMARY KEY,
+FIO varchar(255) not null,
+login varchar(255) not null,
+password char(32) not null,
+birthDay date not null,
+active boolean
+);
